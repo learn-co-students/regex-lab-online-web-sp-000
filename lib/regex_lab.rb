@@ -26,17 +26,23 @@ def first_word_capitalized_and_ends_with_punctuation?(text)
 end
 
 def valid_phone_number?(phone)
-  phone_valid = []
+  # phone_valid = []
 
-  for p in phone do
-    if p.match(/(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}/)
-      phone_valid.push(true)
-    else
-      phone_valid.push(false)
-    end
-  end
+  # for p in phone do
+  #   if p.match(/(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}/)
+  #     phone_valid.push(true)
+  #   else
+  #     phone_valid.push(false)
+  #   end
+  # end
 
-  if phone_valid.all? {|p| p == true}
+  # if phone_valid.all? {|p| p == true}
+  #   return true
+  # else
+  #   return false
+  # end
+
+  if phone.all? {|p| p.match(/(\+\d{1,2}\s)?\(?\d{3}\)?[\s.-]?\d{3}[\s.-]?\d{4}/)}
     return true
   else
     return false
