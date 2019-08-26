@@ -1,6 +1,12 @@
+require 'pry'
 def starts_with_a_vowel?(word)
-
+  "aeiou"word.match(/\w+[aeiou]/) ? true
 end
+
+# def match 
+#   puts "The rain in Spain lies mainly in the plain".match(/\w+ain/)
+# end
+# match()
 
 def words_starting_with_un_and_ending_with_ing(text)
 
