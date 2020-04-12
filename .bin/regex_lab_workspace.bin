@@ -1,0 +1,3 @@
+#!/usr/bin/env ruby
+require_relative "../lib/regex_lab.rb"
+first_word_capitalized_and_ends_with_punctuation?("I stepped on a Corn Flake, now I'm a cereal killer.")
