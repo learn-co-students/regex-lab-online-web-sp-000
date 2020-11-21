@@ -1,40 +1,46 @@
 def starts_with_a_vowel?(word)
 if word.match(/^[aeiouAEIOU]/)
   return true 
-else false  
+else false 
 end 
 end 
 
 
-def words_starting_with_un_and_ending_with_ing(text) 
-  array = []
-  text.each do |array|
-    array << text.match(/w^[un]$[ing]/)
-   array   
+def words_starting_with_un_and_ending_with_ing(text)
+  value = []
+  sample = text.split(" ")
+  sample.each do |something|
+    value << something.scan(/[^un][$ing]/)
   end 
 end 
 
 
 
- def words_five_letters_long(words_string)  
-  if words_string.scan(/\w{5}/)
-  puts words_string
+ def words_five_letters_long(words_string)    
+   count = 1
+   words = []
+   while count <= 6
+      if words_string.scan(/\w{5}/)
+     words << words_string 
+   count +=1 
   end 
 end 
-
-
-
+words 
+end
+ 
 def first_word_capitalized_and_ends_with_punctuation?(text)
-  text.each do |asset|
-    if asset.scan(/^\w[A-Z][$\W]/)
-    true 
+  sample = []
+  value = text.scan/[^A-Z][$\.!?]/
+  sample << value  
+  sample 
 end 
-end 
-end 
+
 
 
 def valid_phone_number?(phone) 
-  phone.each do |numbers|
-    numbers.scan(/(\d+) - (\d+) - (\d+)/)  
+  if phone.scan(/[\d+]/)
+    true 
+  elsif phone.scan.all?(/(\d+)/)
+    false   
+     end   
   end 
-end 
