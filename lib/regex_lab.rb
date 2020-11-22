@@ -1,9 +1,9 @@
 require "pry" 
 def starts_with_a_vowel?(word)
-if word.match(/^[aeiouAEIOU]/)
-  return true 
-else false 
-end 
+  if word.match(/^[aeiouAEIOU]/)
+    return true 
+  else false 
+  end 
 end 
 
 
@@ -24,10 +24,8 @@ end
    count = 0 
    until count == 6
    words_string.scan(/^\w{5}/);
-      #if words_string.length = 5 
-     words << words_string 
-     count +=1 
-      #else 
+   words << words_string 
+     count +=1
       end 
    words  
 end 
@@ -35,12 +33,20 @@ end
 
  
 def first_word_capitalized_and_ends_with_punctuation?(text)
-  if text.scan(/[^A-Z$\.!?]/)
+  # it "Returns true for text starting with a capital letter and ending with #puncutation
+  if text.scan(/[\w^A-Z$\.!?]/)
   true 
-  elsif text.scan(/[^A-Z$\.!?]/)
-elsif text.scan(/^A-Z!$\.!?/)
+  # it "Returns false for text starting with an uncapitalized letter but ending #with puncutation"
+ elsif text.scan(/[\w^a-z]$\.!?/)
+  # it "Returns false for text starting with a capital letter but ending without #puncutation"
+elsif text.scan(/\w[^A-Z]!$\.!?/)
   false 
-  elsif text.scan(/^[a-z]!$\.!?/)
+  #it "Returns false for text starting without a capital letter and ending #without puncutation"
+  elsif text.scan(/\w[^a-z]!$\.!?/)
+  #it "Returns false for text starting without a capital letter and ending #without puncutation"
+
+  false 
+  else text.scan(/\w[^a-z]!$\.!?/)
 end 
 end 
 
@@ -48,8 +54,7 @@ end
 def valid_phone_number?(phone)
   if phone.scan(/[d+]{10}/)
     true 
-else phone.scan.all?(/[d+]{10}/)
+    phone.scan.all?(/[\d+]/)
     false   
      end
   end 
- 
