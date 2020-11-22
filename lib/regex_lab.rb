@@ -23,32 +23,32 @@ end
    words = []
    count = 0 
    until count == 6
-   words_string.grep (/^.\w{5}/);
-   #words_string.scan/(\w{5})/
-      if words_string.length = 5 
+   words_string.scan(/^\w{5}/);
+      #if words_string.length = 5 
      words << words_string 
      count +=1 
-      else 
+      #else 
       end 
-  return words  
-end
+   words  
 end 
 
 
  
 def first_word_capitalized_and_ends_with_punctuation?(text)
-  if text.scan(/^[^A-Z$\.!?]/)
+  if text.scan(/[^A-Z$\.!?]/)
   true 
-else text.scan(/^[a-z]/)
+  elsif text.scan(/$\.!?]/)
+elsif text.scan(/^A-Z!$\.!?/)
   false 
+  elsif text.scan(/^[a-z]!$\.!?/)
 end 
 end 
 
 
 def valid_phone_number?(phone)
-  if phone.scan(/[d+]/)
+  if phone.scan(/[d+]{10}/)
     true 
-  else phone.scan.all?(/[d+]/)
+else phone.scan.all?(/[d+]{10}/)
     false   
      end
   end 
