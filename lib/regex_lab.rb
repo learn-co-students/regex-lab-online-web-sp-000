@@ -1,10 +1,10 @@
 def starts_with_a_vowel?(word)
-  word = ["artichoke","bouzuki","cardinal","uppercut"]
-  if word.scan(/\w+[aeiou]/)
+  
+  word = ["afoot", "Excellent", "incredible", "Absolute", "unreal", "Inconceivable", "octopus"]
+  
+  word.match(/\w[aeiou]/)
     return true 
-  else
-    return false 
-  end
+  
 end
 
 def words_starting_with_un_and_ending_with_ing(text)
