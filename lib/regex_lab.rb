@@ -1,5 +1,9 @@
 def starts_with_a_vowel?(word)
-
+  vowels = ["artichoke", "bouzuki", "cardinal","uppercut"]
+  if vowels.scan(/\w[aeiou]/)
+    return true 
+  else
+    return false 
 end
 
 def words_starting_with_un_and_ending_with_ing(text)
