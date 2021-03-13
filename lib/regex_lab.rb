@@ -1,6 +1,6 @@
 def starts_with_a_vowel?(word)
-  vowels = ["artichoke", "bouzuki", "cardinal","uppercut"]
-  if vowels.scan(/\w[aeiou]/)
+  vowels = ["artichoke","bouzuki","cardinal","uppercut"]
+  if vowels.scan(/\w+[aeiou]/)
     return true 
   else
     return false 
