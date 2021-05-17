@@ -1,6 +1,6 @@
+
+
 def starts_with_a_vowel?(word)
-  
-  word = ["afoot", "Excellent", "incredible", "Absolute", "unreal", "Inconceivable", "octopus"]
   
   word.match(/\b[aeiou]/i)
     
