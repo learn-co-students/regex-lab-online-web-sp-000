@@ -1,3 +1,5 @@
+#ternary operator googling / figured out that syntax to get answers on one line (yay JScript experience)
+#use new syntax through the lab
 def starts_with_a_vowel?(word)
   word.match(/^[aeiouAEIOU]/) ? true : false
 end
