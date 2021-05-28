@@ -4,6 +4,14 @@ def starts_with_a_vowel?(word)
   word.match(/^[aeiouAEIOU]/) ? true : false
 end
 
+# the traditional if else version, longer, clunky, not good. 
+#def starts_with_a_vowel?(word)
+#   if word.match(/^[aeiouAEIOU]/)
+#     true
+#   else
+#     false
+#end
+
 def words_starting_with_un_and_ending_with_ing(text)
   text.scan(/\bun\w*ing\b/)
 end
