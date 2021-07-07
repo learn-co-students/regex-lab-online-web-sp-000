@@ -35,7 +35,7 @@ describe "Working with Regular expressions" do
       words_string = "extreme briny crepe parking snaps grouping snafu round dog be fork spoon"
       expect(words_five_letters_long(words_string).count).to eq(6)
       expect(words_five_letters_long(words_string)).to include("snafu")
-      expect(words_five_letters_long(words_string)).not_to include("fork")
+      expect(words_five_letters_long(words_string)).not_to include text = ("fork")
     end
   end
 
